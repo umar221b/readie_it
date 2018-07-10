@@ -81,7 +81,7 @@ function loadThirdDiv(readie) {
   $("#cont").remove();
   $("#progress_bar").html("75%");
   $("#progress_bar").css("width", "75%");
-  $(".learn").append('<div id="third_div" class="row margin-up padding-down separator-div"> <div class="col-md-6 col-sm-6 center"> <h3>Use This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code> &lt;img src="/readies/readme.json?token=' + readie.token + '" width="0" height="0"/> </code> </pre> </div> <div class="col-md-6 col-sm-6 center"> <h3>Store This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code>' + readie.token + ' </code> </pre> </div> </div>');
+  $(".learn").append('<div id="third_div" class="row margin-up padding-down separator-div"> <div class="col-md-6 col-sm-6 center"> <h3>Use This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code> &lt;img src="https://readieit.herokuapp.com/readies/readme.json?token=' + readie.token + '" width="0" height="0"/> </code> </pre> </div> <div class="col-md-6 col-sm-6 center"> <h3>Store This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code>' + readie.token + ' </code> </pre> </div> </div>');
   $("#third_div").hide().show("slow");
   $(".learn").after('<div class="center" style="margin-top: 8px;"><button onclick="loadFourthDiv()" id="cont" class="btn btn-primary btn-lg" style="font-size: 16px;">Next</button></div>');
   scroll("#third_div");
