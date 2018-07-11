@@ -1,14 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @readie.url %>
-</p>
-
-<p>
-  <strong>Read:</strong>
-  <%= @readie.read %>
-</p>
-
-<%= link_to 'Edit', edit_readie_path(@readie) %> |
-<%= link_to 'Back', readies_path %>
+<div class="centered white no-cursor">
+  <h2>Readie Read?</h2>
+  <br />
+  <br />
+  <% if !@readie || @readie.readie_reads.blank? %>
+  <h3>This Readie has not been read yet, check again later!</h3>
+  <% else %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @readie.readie_reads.each_with_index do |r_r, i| %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= r_r.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br />
+  <p>
+    Total number of reads is: <%= @readie.readie_reads.size %>
+  </p>
+  <% end %>
+  <br />
+  <%= link_to('Back', root_url, class: 'btn btn-info') %>
+</div>

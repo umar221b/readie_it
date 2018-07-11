@@ -91,9 +91,8 @@ function loadFourthDiv() {
   $("#cont").remove();
   $("#progress_bar").html("100%");
   $("#progress_bar").css("width", "100%");
-  $(".learn").append("<div id='fourth_div' class='row margin-up padding-down separator-div'><div class='col-md-12 col-sm-12 center'><h3>How to use it?</h3><p>Upon generating a Readie, you will see 2 boxes with some sort of code inside each of them. One is used to add the Readie to your email, and the other is used to check the status of your Readie.</p></div></div>");
+  $(".learn").append("<div id='fourth_div' class='row margin-up padding-down separator-div'><div class='col-md-12 col-sm-12 center'><h3>Use it</h3><p>Just place the code you copied in your email and use the token to check your Readie's status later!</p></div></div>");
   $("#fourth_div").hide().show("slow");
-  $(".learn").after('<div class="center" style="margin-top: 8px;"><button data-toggle="modal" data-target="#confirmModal" id="cont" class="btn btn-primary btn-lg" style="font-size: 16px;">Generate</button></div>');
   scroll("#fourth_div");
 }
 
