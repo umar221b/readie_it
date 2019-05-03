@@ -32,6 +32,7 @@ class ReadiesController < ApplicationController
       render :nice_try, status: :ok
     elsif request.format.json?
       @readie.read
+      send_data(ActionController::Base.helpers.asset_path('img.png'), type: 'image/png')
     end
   end
 
