@@ -41,6 +41,10 @@ class ReadiesController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_readie
     token = params[:token]
+    if token.blank?
+      render :nice_try, status: :ok
+      return
+    end
     @readie = Readie.find_by(token: token)
   end
 end
