@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <% @readie.readie_reads.each_with_index do |r_r, i| %>
-        <% next if i < 3 %>
+        <% next if i < 2 %>
         <tr>
           <td><%= i - 1 %></td>
           <td><%= r_r.created_at %></td>
@@ -24,7 +24,7 @@
   </table>
   <br />
   <p>
-    Total number of reads is: <%= @readie.readie_reads.size %>
+    Total number of reads is: <%= @readie.readie_reads.size - 2 %>
   </p>
   <% end %>
   <br />
