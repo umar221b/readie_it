@@ -23,9 +23,8 @@
 					<div class="separator-div row margin-up padding-down">
 					<div class="col-md-12 col-sm-12 center">
 							<h3>What is a Readie?</h3>
-							<p>
-                A Readie is a slick trick you can use to know whether somebody opened the email you sent them or not.
-              </p>
+							<p>A Readie is a slick trick you can use to know whether somebody opened the email you sent them or not.</p>
+							<p>Readie works using a very common trick. The code you will be using will insert an invisible image (0x0 pixels) into your email. Once the recepient opens the email, the image will be displayed and we will know that the email was opened!</p>
 						</div>
 					</div>
 				</div>
@@ -94,7 +93,7 @@ function loadThirdDiv(readie) {
   $("#cont").remove();
   $("#progress_bar").html("75%");
   $("#progress_bar").css("width", "75%");
-  $(".learn").append('<div id="third_div" class="row margin-up padding-down separator-div"> <div class="col-md-6 col-sm-6 center"> <h3>Use This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code> &lt;img src="' + url + '?token=' + readie.token + '" width="0" height="0"/> </code> </pre> </div> <div class="col-md-6 col-sm-6 center"> <h3>Store This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code>' + readie.token + ' </code> </pre> </div> </div>');
+  $(".learn").append('<div id="third_div" class="row margin-up padding-down separator-div"> <div class="col-md-6 col-sm-6 center"> <h3>Use This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code> &lt;img src="' + url + '?token=' + readie.token + '" width="0" height="0"/></code> </pre> </div> <div class="col-md-6 col-sm-6 center"> <h3>Store This</h3> <pre class="copiable" data-toggle="tooltip" title="Click to Copy!" data-placement="bottom"> <code>' + readie.token + '</code> </pre> </div> </div>');
   $("#third_div").hide().show("slow");
   $(".learn").after('<div class="center" style="margin-top: 8px;"><button onclick="loadFourthDiv()" id="cont" class="btn btn-info btn-lg" style="font-size: 16px;">Next</button></div>');
   scroll("#third_div");
@@ -104,7 +103,7 @@ function loadFourthDiv() {
   $("#cont").remove();
   $("#progress_bar").html("100%");
   $("#progress_bar").css("width", "100%");
-  $(".learn").append("<div id='fourth_div' class='row margin-up padding-down separator-div'><div class='col-md-12 col-sm-12 center'><h3>Use it</h3><p><ul style='text-align: left;'><li>Go on about writing your email as usual. When you finish writing it, type '****' into your email body on a new line.</li><li>Right click the stars and click Inspect (or Inspect Element on Safari - You may need to enable 'Show develop menu in menu bar' from Preferences > Advanced). </li><li>Right click the stars and choose Edit as HTML.</li><li>Highlight the stars and paste the code you copied to replace them then press CTRL(CMD) + Enter to apply.</li><li>Make sure you do not backspace the end of your email or select-all and delete your text as that might remove the code you added.</li><li>That is it! Send your email and come back later to check if it has been read!</li></ul></p></div></div>");
+  $(".learn").append("<div id='fourth_div' class='row margin-up padding-down separator-div'><div class='col-md-12 col-sm-12 center'><h3>Use it</h3><p><ul style='text-align: left;'><li>Go on about writing your email as usual. When you finish writing it, type '****' into your email body on a new line.</li><li>Right click the stars and click Inspect (or Inspect Element on Safari - You may need to enable 'Show develop menu in menu bar' from Preferences > Advanced). </li><li>Right click the stars and choose Edit as HTML.</li><li>Highlight the stars and paste the code you copied to replace them then press CTRL(CMD) + Enter to apply.</li><li>Make sure you do not backspace the end of your email or select-all and delete your text as that might remove the code you added.</li><li>That is it! Send your email and come back later to check if it has been read!</li><br><p>Please note that Readie has no way of knowing who opened the email. This means that if you open the email yourself (in your sent folder for example), Readie will show that on the website.</p></ul></p></div></div>");
   $("#fourth_div").hide().show("slow");
   scroll("#fourth_div");
 }

@@ -2,7 +2,7 @@
   <h1>Readie Read?</h1>
   <br />
   <br />
-  <% if !@readie || @readie.readie_reads.blank? %>
+  <% if !@readie || @readie.readie_reads.size < 3 %>
   <h3>This Readie has not been read yet, check again later!</h3>
   <% else %>
   <table class="table table-hover">
@@ -14,8 +14,9 @@
     </thead>
     <tbody>
       <% @readie.readie_reads.each_with_index do |r_r, i| %>
+        <% next if i < 3 %>
         <tr>
-          <td><%= i + 1 %></td>
+          <td><%= i - 1 %></td>
           <td><%= r_r.created_at %></td>
         </tr>
       <% end %>
