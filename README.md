@@ -1,24 +1,5 @@
-# README
+# Readie
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple way to help you track whether your email recipients opened your emails or not.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Go to the [website](https://readieit.herokuapp.com/) and follow the simple steps to get started!
