@@ -1,3 +1,13 @@
 .white {
-  color: white;
+  color: white !important;
+}
+
+.back-show, .back-show:hover {
+  background-color: white;
+  color: black;
+}
+
+.back-show:hover {
+  background-color: #ffffffdb;
+  color: black;
 }

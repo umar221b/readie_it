@@ -1,5 +1,5 @@
-<div class="centered white no-cursor">
-  <h2>Readie Read?</h2>
+<div class="centered no-cursor">
+  <h1>Readie Read?</h1>
   <br />
   <br />
   <% if !@readie || @readie.readie_reads.blank? %>
@@ -27,5 +27,11 @@
   </p>
   <% end %>
   <br />
-  <%= link_to('Back', root_url, class: 'btn btn-info') %>
+  <%= link_to('Back', root_url, class: 'btn-back btn btn-lg back-show') %>
 </div>
+
+<script>
+  $(function() {
+  	$("body").css("background-color", "#e28332");
+  });
+</script>

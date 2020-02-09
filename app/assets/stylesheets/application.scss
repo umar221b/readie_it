@@ -12,9 +12,12 @@
  *
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
+
+ $readie-create: #094452;
+ $readie-read: #e28332;
+
+ $info: $readie-create;
+ $warning: $readie-read;
+
  @import "bootstrap";
- @import "landing";
- @import "scaffolds";
- @import "new";
- @import "nice_try";
- @import "show";
+ @import "**/*";
