@@ -74,7 +74,11 @@ function loadTooltips() {
   $('[data-toggle="tooltip"]').tooltip();
   $('pre.copiable').click(function() {
     copy(this.children[0]);
+		$(this).attr('data-original-title', 'Copied!').tooltip('show');
   });
+	$('pre.copiable').mouseleave(function() {
+	  $(this).attr('data-original-title', 'Click to copy').tooltip();
+	});
 }
 
 function loadThirdDiv(readie) {
